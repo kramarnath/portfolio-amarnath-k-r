@@ -312,7 +312,7 @@ section h2:not(.center)::after{content:"";flex:1;height:1px;background:var(--lin
       <p class="hello">Hello, I'm</p>
       <h1>Amarnath K R</h1>
       <p class="role">Electronics Engineer</p>
-      <p class="lead">Expertise in Circuit design, PCB design, Embedded systems and IoT, with hands-on Experiance in C and Python.</p>
+      <p class="lead">Expertise in circuit design, PCB design, embedded systems and IoT, with hands-on firmware in C and Python.</p>
       <p class="avail"><span class="dot"></span>Open to PCB Design, Embedded, IoT and other related roles.</p>
       <div class="social">
         <a class="ico circ" href="https://github.com/kramarnath" aria-label="GitHub" target="_blank" rel="noopener">
@@ -328,7 +328,7 @@ section h2:not(.center)::after{content:"";flex:1;height:1px;background:var(--lin
       <div class="cta">
         <a class="btn solid" href="#projects">View my work</a>
         <a class="btn" href="#contact">Contact me</a>
-        <a class="btn" href="docs/Resume.pdf">Resume</a>
+        <a class="btn" href="resume.pdf">Resume</a>
       </div>
     </div>
     <a class="scroll" href="#about" aria-label="Scroll down">
@@ -349,13 +349,11 @@ section h2:not(.center)::after{content:"";flex:1;height:1px;background:var(--lin
         <span class="node py"><svg viewBox="0 0 48 48"><path d="M16 14 L6 24 L16 34 M32 14 L42 24 L32 34 M28 9 L20 39"/></svg></span>
       </div>
       <h2 class="center">About Me</h2>
-      <h3 class="who">Who Am I</h3>
+      <h3 class="who">Who I Am</h3>
       <div class="about-text">
-        <p>My journey in electronics began with an ITI, followed by a Diploma and a B.Tech in Electronics and Communication Engineering from Government Engineering College, Thrissur (GEC Thrissur). This progression gave me opportunities to understand electronics from both practical and theoretical perspectives.</p>
-        <p>I've worked on various projects involving microcontrollers, circuit design, PCB development, and hardware interfacing. I've also explored different electronics tools, simulation environments, and CAD softwares through the journey, along with programming in Embedded C and Python.</p>
-        <p>I enjoy building things, experimenting with new technologies, understanding how hardware works, and solving practical engineering problems. I'm always curious to explore new areas and turn ideas into working projects.</p>
-        <p>Beyond academics, I've gained industrial experience in manufacturing, quality inspection, equipment testing, and troubleshooting industrial control systems.</p>
-        <p>There's more to my journey than a few paragraphs. Feel free to explore my projects, experience, and technical interests to know more about me.</p>
+        <p>I started with an <b>ITI in Electronics Mechanic</b>, spent time in industry, then completed a <b>Diploma in Electronics Engineering</b> and a <b>B.Tech in Electronics and Communication Engineering from GEC Thrissur</b>. At FCI-OEN Connectors I inspected and tested connector assemblies and operated production machinery. At ERCMPU Ltd I diagnosed and fixed faults in industrial control equipment and helped keep production running. Those years taught me to pay attention to detail, fix problems methodically and understand how hardware testing works in practice.</p>
+        <p>In college and through my projects I gained hands-on experience with <b>ESP32, STM32, UART, SPI, I2C, GPIO, sensors, Python and Embedded C</b>, and with debugging real hardware. I have designed my own PCBs, written firmware for embedded systems, worked with different interfaces, and designed a 2.4 GHz RF front-end transmitter in Cadence Virtuoso.</p>
+        <p>I enjoy hardware testing, embedded systems, test automation, debugging and working with lab instruments. As someone new to the field, I want to learn how teams build test methods, instruments and fixtures, and to contribute my hardware and embedded skills along the way. I am looking for <b>embedded, IoT and core electronics roles</b> across Kerala and South India.</p>
       </div>
       <div class="stats">
         <div class="stat"><strong id="statProjects">8</strong><span>Projects completed</span></div>
@@ -427,7 +425,7 @@ section h2:not(.center)::after{content:"";flex:1;height:1px;background:var(--lin
       <a class="btn" href="https://github.com/kramarnath" target="_blank" rel="noopener">GitHub</a>
       <a class="btn" href="https://www.linkedin.com/in/amarnath-k-r-276395237" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-    <small>&copy; 2026 Amarnath K R. Designed and built by me with help of AI.</small>
+    <small>&copy; 2026 Amarnath K R. Designed and built with the help of AI.</small>
   </div>
 </footer>
 
@@ -500,7 +498,7 @@ const projects = [
     icon: "anomaly",
     year: "2026",
     cats: ["iot", "pcb"],
-    line: "A standalone edge device that flags unusual readings using statistics, with no cloud.",
+    line: "A standalone ESP-12E edge device that flags unusual readings using statistics, with no cloud.",
     skills: ["ESP32", "Edge analytics", "KiCad", "4-layer PCB", "I2C"],
     detail: "I used the data logged by my environmental monitoring system as the baseline to build and validate a statistical anomaly detector. I then re-implemented it as a standalone ESP-12E device that senses, analyses and alerts on its own, without any cloud dependency. I also designed the custom PCBs in KiCad: a 2-layer ESP32 breakout board and a 4-layer ESP-12E board.",
     steps: [
@@ -512,6 +510,25 @@ const projects = [
     ],
     extra: "Breakout board: CH340G USB-to-UART, AMS1117-3.3 regulator, DHT11 footprint and a GND copper pour, with Gerber files exported for manufacturing. The 4-layer board covers schematic, layout, DRC checks and 3D visualization.",
     repo: "https://github.com/kramarnath/edge-env-anomaly-detector"
+  },
+  {
+    title: "Capacitive Dropper Power Supply",
+    view3d: "docs/cap-drop-supply.png",
+    icon: "capdrop",
+    year: "2026",
+    cats: ["pcb"],
+    line: "A compact transformerless supply that drops mains voltage with an X2 capacitor, laid out in KiCad.",
+    skills: ["KiCad", "X2 capacitor", "Zener regulation", "Mains safety", "PCB layout"],
+    detail: "A compact non-isolated capacitive dropper power supply for low-power electronics, running straight from 230 V or 120 V AC mains. Instead of a bulky transformer, it uses the reactance of an X2 safety capacitor to limit the input current. I designed the through-hole PCB in KiCad, with the high-voltage and low-voltage sections physically separated, plus an onboard fuse and an NTC thermistor for fault and inrush protection.",
+    steps: [
+      "A 0.82 \u00b5F X2 safety capacitor limits the current from the mains through its reactance, about 3.88 k\u03a9 at 50 Hz.",
+      "That gives an ideal AC current of about 59 mA (230 V divided by 3.88 k\u03a9). This is the current through the capacitor, not a guaranteed DC output current.",
+      "A full-wave bridge rectifier turns the AC into pulsating DC.",
+      "Filter capacitors smooth it, and a Zener diode and regulator stage hold the output voltage.",
+      "A fuse (F1) and an NTC thermistor (TH1) protect against faults and switch-on surge."
+    ],
+    extra: "Safety: this circuit is not isolated from the mains. The whole board and its output terminals can be at mains potential, so never touch it while it is connected. Board details: 0.82 \u00b5F (824) X2 capacitor, 1 oz copper, 2 mm to 2.5 mm traces, and through-hole parts for easy assembly and inspection.",
+    repo: "https://github.com/kramarnath/capcitor-dropper-power-supply"
   },
   {
     title: "Proximity Machine Cut-Off Circuit",
@@ -549,7 +566,26 @@ const projects = [
     repo: "https://github.com/kramarnath/env-monitoring-system-esp32"
   },
   {
-    title: "LM317 Adjustable Power Supply with CC Limiting",
+    title: "Dual-Rail Power Supply",
+    view3d: "docs/dual-psply-3d.png",
+    icon: "dual",
+    year: "2026",
+    cats: ["pcb"],
+    line: "An adjustable plus and minus linear supply for op-amp, audio and analog bench work.",
+    skills: ["LM317", "LM337", "KiCad", "2-layer PCB", "Analog power"],
+    detail: "An adjustable dual-rail linear supply built from an LM317T for the positive rail and an LM337T for the negative rail. A center-tapped transformer feeds a bridge rectifier and two large filter capacitors, and each rail is regulated and adjusted on its own with a 5 k\u03a9 potentiometer. The result is a symmetric +V, GND, \u2212V output for op-amp circuits, audio preamplifiers and general analog work. I designed the schematic and the 2-layer PCB in KiCad.",
+    steps: [
+      "A center-tapped AC transformer feeds a KBU6M bridge rectifier.",
+      "Two large capacitors, one per rail, smooth the rectified voltage into positive and negative unregulated rails.",
+      "The LM317T regulates the positive rail and the LM337T the negative rail, each set with its own 5 k\u03a9 potentiometer.",
+      "Bypass and output capacitors reduce ripple, and protection diodes guard both regulators.",
+      "An indicator LED on each rail shows when it is powered."
+    ],
+    extra: "The output is about \u00b11.25 V to \u00b127 V, but the maximum depends on the transformer voltage, the regulator dropout (about 2 to 3 V) and the load current. Screw terminals handle the AC input and DC output, and the board has mounting holes at all four corners.",
+    repo: "https://github.com/kramarnath/dual-power-supply"
+  },
+  {
+    title: "Adjustable Power Supply with CC Limiting",
     view3d: "docs/3d-lm317.png",
     icon: "psu",
     year: "2026",
@@ -641,6 +677,8 @@ const icons = {
   rf: '<circle cx="24" cy="17" r="3" fill="currentColor"/><path d="M24 22 V42 M16 42 H32"/><path d="M15 12 A13 13 0 0 0 15 22"/><path d="M33 12 A13 13 0 0 1 33 22"/><path d="M9 8 A20 20 0 0 0 9 26"/><path d="M39 8 A20 20 0 0 1 39 26"/>',
   ml: '<path d="M24 5 C27 13 36 17 36 28 A12 12 0 0 1 12 28 C12 22 16 20 18 13 C20 17 22 17 24 5 Z"/><path d="M24 24 C26 28 29 29 29 33 A5 5 0 0 1 19 33 C19 30 22 28 24 24 Z"/>',
   laser: '<path d="M4 19 H13 V29 H4 Z"/><path d="M13 24 H38" stroke-dasharray="2 4 9 4"/><path d="M42 12 V36"/>',
+  capdrop: '<path d="M4 28 H19 M19 14 V42 M29 14 V42 M29 28 H44"/><path d="M8 9 q4 -6 8 0 t8 0 t8 0 t8 0"/>',
+  dual: '<path d="M6 24 H42" stroke-dasharray="3 4" opacity=".55"/><path d="M24 5 V17 M18 11 H30"/><path d="M18 37 H30"/><path d="M10 42 H38" opacity="0"/>',
   robot: '<circle cx="24" cy="26" r="16"/><circle cx="24" cy="26" r="5"/><path d="M12 14 L8 9 M36 14 L40 9"/>'
 };
 
