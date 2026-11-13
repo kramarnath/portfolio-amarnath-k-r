@@ -5,6 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>krAmarnath | Electronics, PCB, Embedded, IoT, Network Engineer</title>
 <meta name="description" content="Portfolio of Amarnath K R, B.Tech ECE graduate from Kerala. PCB design, embedded firmware, IoT and Python projects.">
+<link rel="canonical" href="https://kramarnath.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" type="image/png" sizes="180x180">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta name="theme-color" content="#1b0e14">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Amarnath K R">
+<meta property="og:locale" content="en_IN">
+<meta property="og:url" content="https://kramarnath.github.io/">
+<meta property="og:title" content="Amarnath K R | Electronics, PCB, Embedded and IoT Engineer">
+<meta property="og:description" content="B.Tech ECE graduate from Kerala. PCB design, embedded firmware, IoT and Python projects.">
+<meta property="og:image" content="https://kramarnath.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Amarnath K R, Electronics Engineer. PCB design, Embedded, IoT.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Amarnath K R | Electronics, PCB, Embedded and IoT Engineer">
+<meta name="twitter:description" content="B.Tech ECE graduate from Kerala. PCB design, embedded firmware, IoT and Python projects.">
+<meta name="twitter:image" content="https://kramarnath.github.io/og-image.png">
+<!-- Google Search Console: paste the verification meta tag Google gives you on the next line, then delete this comment -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Amarnath K R","url":"https://kramarnath.github.io/","jobTitle":"Electronics Engineer","description":"B.Tech ECE graduate from Kerala working on PCB design, embedded firmware, IoT and Python projects.","knowsAbout":["PCB design","Embedded systems","IoT","Circuit design","Python"],"sameAs":["https://github.com/kramarnath","https://www.linkedin.com/in/amarnath-k-r-276395237"]}
+</script>
+<script>
+/* apply the saved theme before the page paints, so there is no flash */
+(function(){try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")==="light"?"light":"dark");}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -15,8 +42,14 @@
    Midnight blue (earlier):      bg #11131a, card #1a1d28, deep #0b0d12, accent #8fa8ff */
 :root{
   color-scheme:dark;
-  --bg:#1b0e14; --card:#271720; --deep:#12080d; --ink:#f3ece4; --muted:#b5a5a6; --line:rgba(243,236,228,.14); --accent:#b5c15a;
-  --pcb:#c8a45a; --fw:#86c28b; --iot:#b79be0; --py:#e8845f;
+  --bg:#1b0e14; --card:#271720; --deep:#12080d; --ink:#f3ece4; --ink-rgb:243,236,228; --muted:#b5a5a6; --line:rgba(var(--ink-rgb),.14); --accent:#b5c15a;
+  --pcb:#c8a45a; --fw:#86c28b; --iot:#b79be0; --py:#e8845f; --ds:#5ec2cf; --ml:#e56b8a;
+}
+/* LIGHT THEME colours (used when the visitor taps the sun / moon button) */
+:root[data-theme="light"]{
+  color-scheme:light;
+  --bg:#f7f1e8; --card:#fffdf9; --deep:#ede4d6; --ink:#2b171e; --ink-rgb:43,23,30; --muted:#6e5a5f; --accent:#5f6f14;
+  --pcb:#97701a; --fw:#2b8450; --iot:#7048c0; --py:#c2512a; --ds:#1c8795; --ml:#c03a62;
 }
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
@@ -32,7 +65,7 @@ h1,h2,h3,h4{line-height:1.12;letter-spacing:-.01em;font-weight:500}
 .bar .wrap{display:flex;justify-content:flex-end;align-items:center;height:64px}
 .right{display:flex;align-items:center;gap:6px}
 .ico{display:grid;place-items:center;width:42px;height:42px;border-radius:8px;text-decoration:none;transition:background .2s,color .2s}
-.ico:hover{background:rgba(243,236,228,.1);color:var(--accent)}
+.ico:hover{background:rgba(var(--ink-rgb),.1);color:var(--accent)}
 .ico svg{width:21px;height:21px;fill:currentColor}
 .ico svg.stroke{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .menu-btn{border:1.5px solid var(--line);background:none;margin-left:6px}
@@ -47,7 +80,7 @@ h1,h2,h3,h4{line-height:1.12;letter-spacing:-.01em;font-weight:500}
   box-shadow:0 16px 40px rgba(0,0,0,.5);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s,transform .2s,visibility .2s}
 .menu.open{opacity:1;visibility:visible;transform:none}
 .menu a{display:block;padding:11px 14px;border-radius:8px;text-decoration:none}
-.menu a:hover{background:rgba(243,236,228,.08);color:var(--accent)}
+.menu a:hover{background:rgba(var(--ink-rgb),.08);color:var(--accent)}
 
 /* hero */
 .hero{min-height:calc(100vh - 64px);min-height:calc(100svh - 64px);display:flex;flex-direction:column;justify-content:center;padding:56px 0 40px}
@@ -98,7 +131,7 @@ h2{font-size:clamp(32px,4.8vw,50px);font-weight:300;margin-bottom:12px}
 .card p{color:var(--muted);font-size:16px;font-weight:300}
 .hint{margin-top:auto;font-size:14.5px;color:var(--accent)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}
-.chips li{font-size:14px;padding:3px 12px;background:rgba(243,236,228,.08);border-radius:99px}
+.chips li{font-size:14px;padding:3px 12px;background:rgba(var(--ink-rgb),.08);border-radius:99px}
 
 /* flash card */
 dialog{border:0;padding:0;background:none;color:inherit;max-width:none;max-height:none;width:100%;height:100%;overflow:auto}
@@ -202,7 +235,7 @@ footer small{display:block;margin-top:40px;color:var(--muted);font-size:14.5px}
 @media (max-width:520px){.symbols svg{width:34px;height:34px}.symbols span.node{padding:0 6px}}
 
 /* polish: texture, headings, area-coloured cards, bands, reveal */
-body{background-image:radial-gradient(rgba(243,236,228,.05) 1px,transparent 1px);background-size:30px 30px}
+body{background-image:radial-gradient(rgba(var(--ink-rgb),.05) 1px,transparent 1px);background-size:30px 30px}
 section h2:not(.center){display:flex;align-items:center;gap:22px}
 section h2:not(.center)::after{content:"";flex:1;height:1px;background:var(--line)}
 #skills,#education{background:var(--deep);border-block:1px solid var(--line)}
@@ -247,11 +280,18 @@ section h2:not(.center)::after{content:"";flex:1;height:1px;background:var(--lin
 @media (prefers-reduced-motion:reduce){.totop{transition:none}}
 
 /* icon tiles instead of photos */
-.thumb{background:rgba(243,236,228,.06);background:color-mix(in srgb,var(--c) 16%,var(--card));border:1px solid rgba(243,236,228,.2);border:1px solid color-mix(in srgb,var(--c) 40%,transparent);color:var(--c)}
+.thumb{background:rgba(var(--ink-rgb),.06);background:color-mix(in srgb,var(--c) 16%,var(--card));border:1px solid rgba(var(--ink-rgb),.2);border:1px solid color-mix(in srgb,var(--c) 40%,transparent);color:var(--c)}
 .thumb svg{width:38px;height:38px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 
 /* no status line: centre tags beside the icon */
 .card-head,.modal-top{align-items:center}
+
+/* theme switch button */
+.theme-btn{border:0;background:none}
+.theme-btn .moon{display:none}
+:root[data-theme="light"] .theme-btn .sun{display:none}
+:root[data-theme="light"] .theme-btn .moon{display:block}
+:root[data-theme="light"] .menu{box-shadow:0 16px 40px rgba(43,23,30,.18)}
 
 /* name size, small notes, empty message */
 .hero h1{font-size:clamp(44px,9.4vw,112px)}
@@ -283,6 +323,10 @@ section h2:not(.center)::after{content:"";flex:1;height:1px;background:var(--lin
 <header class="bar">
   <div class="wrap">
     <div class="right">
+      <button class="ico theme-btn" id="themeBtn" aria-label="Switch to light theme" title="Switch theme">
+        <svg class="sun stroke" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
       <button class="ico menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span></button>
     </div>
   </div>
@@ -479,12 +523,12 @@ section h2:not(.center)::after{content:"";flex:1;height:1px;background:var(--lin
 <script>
 /* Areas. The colour of each one is used on tiles, tags and skills. */
 const cats = {
-  pcb:      { name: "Hardware and PCB", color: "#c8a45a" },
-  embedded: { name: "Embedded",         color: "#86c28b" },
-  iot:      { name: "IoT",              color: "#b79be0" },
-  python:   { name: "Python",           color: "#e8845f" },
-  ds:       { name: "Data science",     color: "#5ec2cf" },
-  ml:       { name: "Machine learning", color: "#e56b8a" }
+  pcb:      { name: "Hardware and PCB", color: "var(--pcb)" },
+  embedded: { name: "Embedded",         color: "var(--fw)" },
+  iot:      { name: "IoT",              color: "var(--iot)" },
+  python:   { name: "Python",           color: "var(--py)" },
+  ds:       { name: "Data science",     color: "var(--ds)" },
+  ml:       { name: "Machine learning", color: "var(--ml)" }
 };
 
 /* Edit this list to change your projects.
@@ -494,7 +538,7 @@ const cats = {
 const projects = [
   {
     title: "Edge Anomaly Detector",
-    view3d: "docs/3d-edge-anomaly.png",
+    view3d: "images/3d-edge-anomaly.png",
     icon: "anomaly",
     year: "2026",
     cats: ["iot", "pcb"],
@@ -513,7 +557,7 @@ const projects = [
   },
   {
     title: "Capacitive Dropper Power Supply",
-    view3d: "docs/cap-drop-supply.png",
+    view3d: "images/cap-drop-supply.png",
     icon: "capdrop",
     year: "2026",
     cats: ["pcb"],
@@ -528,11 +572,11 @@ const projects = [
       "A fuse (F1) and an NTC thermistor (TH1) protect against faults and switch-on surge."
     ],
     extra: "Safety: this circuit is not isolated from the mains. The whole board and its output terminals can be at mains potential, so never touch it while it is connected. Board details: 0.82 \u00b5F (824) X2 capacitor, 1 oz copper, 2 mm to 2.5 mm traces, and through-hole parts for easy assembly and inspection.",
-    repo: "https://github.com/kramarnath/capcitor-dropper-power-supply"
+    repo: "https://github.com/kramarnath/capacitive-dropper-power-supply"
   },
   {
     title: "Proximity Machine Cut-Off Circuit",
-    view3d: "docs/3d-pir555.png",
+    view3d: "images/3d-pir555.png",
     icon: "pir",
     year: "2026",
     cats: ["pcb"],
@@ -550,7 +594,7 @@ const projects = [
   },
   {
     title: "Environmental Monitoring System",
-    view3d: "docs/3d-env-monitor.png",
+    view3d: "images/3d-env-monitor.png",
     icon: "env",
     year: "2026",
     cats: ["iot", "pcb"],
@@ -566,8 +610,8 @@ const projects = [
     repo: "https://github.com/kramarnath/env-monitoring-system-esp32"
   },
   {
-    title: "Dual-Rail Power Supply",
-    view3d: "docs/dual-psply-3d.png",
+    title: "Adjustable Dual-Rail Power Supply (LM317 / LM337)",
+    view3d: "images/dual_psply_3d.png",
     icon: "dual",
     year: "2026",
     cats: ["pcb"],
@@ -582,11 +626,11 @@ const projects = [
       "An indicator LED on each rail shows when it is powered."
     ],
     extra: "The output is about \u00b11.25 V to \u00b127 V, but the maximum depends on the transformer voltage, the regulator dropout (about 2 to 3 V) and the load current. Screw terminals handle the AC input and DC output, and the board has mounting holes at all four corners.",
-    repo: "https://github.com/kramarnath/dual-power-supply"
+    repo: "https://github.com/kramarnath/dual-rail-power-supply"
   },
   {
-    title: "Adjustable Power Supply with CC Limiting",
-    view3d: "docs/3d-lm317.png",
+    title: "LM317 Adjustable Power Supply with CC Limiting",
+    view3d: "images/3d-lm317.png",
     icon: "psu",
     year: "2026",
     cats: ["pcb"],
@@ -893,6 +937,18 @@ if ("IntersectionObserver" in window){
 
 /* back to top button */
 addEventListener("scroll", () => $("toTop").classList.toggle("show", scrollY > 700), { passive: true });
+
+/* light / dark theme switch */
+const themeBtn = $("themeBtn");
+function applyTheme(t){
+  document.documentElement.setAttribute("data-theme", t);
+  try { localStorage.setItem("theme", t); } catch (e) {}
+  themeBtn.setAttribute("aria-label", t === "light" ? "Switch to dark theme" : "Switch to light theme");
+  const tc = document.querySelector('meta[name="theme-color"]');
+  if (tc) tc.setAttribute("content", t === "light" ? "#f7f1e8" : "#1b0e14");
+}
+themeBtn.addEventListener("click", () => applyTheme(document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light"));
+applyTheme(document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark");
 
 /* menu */
 const btn = $("menuBtn"), menu = $("menu");
