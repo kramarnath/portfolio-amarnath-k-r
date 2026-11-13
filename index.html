@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>krAmarnath | Electronics, PCB, Embedded, IoT, Network Engineer</title>
+<meta name="description" content="Portfolio of Amarnath K R, B.Tech ECE graduate from Kerala. PCB design, embedded firmware, IoT and Python projects.">
+<link rel="canonical" href="https://kramarnath.github.io/">
+<meta name="theme-color" content="#1b0e14">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Amarnath K R">
+<meta property="og:locale" content="en_IN">
+<meta property="og:url" content="https://kramarnath.github.io/">
+<meta property="og:title" content="Amarnath K R | Electronics, PCB, Embedded and IoT Engineer">
+<meta property="og:description" content="B.Tech ECE graduate from Kerala. PCB design, embedded firmware, IoT and Python projects.">
+<meta property="og:image" content="https://kramarnath.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Amarnath K R, Electronics Engineer. PCB design, Embedded, IoT.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Amarnath K R | Electronics, PCB, Embedded and IoT Engineer">
+<meta name="twitter:description" content="B.Tech ECE graduate from Kerala. PCB design, embedded firmware, IoT and Python projects.">
+<meta name="twitter:image" content="https://kramarnath.github.io/og-image.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Amarnath K R","url":"https://kramarnath.github.io/","jobTitle":"Electronics Engineer","description":"B.Tech ECE graduate from Kerala working on PCB design, embedded firmware, IoT and Python projects.","knowsAbout":["PCB design","Embedded systems","IoT","Circuit design","Python"],"sameAs":["https://github.com/kramarnath","https://www.linkedin.com/in/amarnath-k-r-276395237"]}
+</script>
+<script>
+/* apply the saved theme before the page paints, so there is no flash */
+(function(){try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")==="light"?"light":"dark");}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#1b0e14; --card:#271720; --deep:#12080d; --ink:#f3ece4; --ink-rgb:243,236,228; --muted:#b5a5a6; --line:rgba(var(--ink-rgb),.14); --accent:#b5c15a;
+  --pcb:#c8a45a; --fw:#86c28b; --iot:#b79be0; --py:#e8845f; --ds:#5ec2cf; --ml:#e56b8a;
+}
+:root[data-theme="light"]{
+  color-scheme:light;
+  --bg:#f7f1e8; --card:#fffdf9; --deep:#ede4d6; --ink:#2b171e; --ink-rgb:43,23,30; --muted:#6e5a5f; --accent:#5f6f14;
+  --pcb:#97701a; --fw:#2b8450; --iot:#7048c0; --py:#c2512a; --ds:#1c8795; --ml:#c03a62;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 "Jost",system-ui,sans-serif}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{line-height:1.12;letter-spacing:-.01em;font-weight:500}
+
+.bar{position:sticky;top:0;z-index:20;background:rgba(27,14,20,.88);background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;justify-content:flex-end;align-items:center;height:64px}
+.right{display:flex;align-items:center;gap:6px}
+.ico{display:grid;place-items:center;width:42px;height:42px;border-radius:8px;text-decoration:none;transition:background .2s,color .2s}
+.ico:hover{background:rgba(var(--ink-rgb),.1);color:var(--accent)}
+.ico svg{width:21px;height:21px;fill:currentColor}
+.ico svg.stroke{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.menu-btn{border:1.5px solid var(--line);background:none;margin-left:6px}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s;content:""}
+.menu-btn span{position:relative}
+.menu-btn span::before{position:absolute;top:-6px}
+.menu-btn span::after{position:absolute;top:6px}
+.menu-btn[aria-expanded="true"] span{background:transparent}
+.menu-btn[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+.menu{position:absolute;right:24px;top:70px;min-width:200px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px;
+  box-shadow:0 16px 40px rgba(0,0,0,.5);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s,transform .2s,visibility .2s}
+.menu.open{opacity:1;visibility:visible;transform:none}
+.menu a{display:block;padding:11px 14px;border-radius:8px;text-decoration:none}
+.menu a:hover{background:rgba(var(--ink-rgb),.08);color:var(--accent)}
+
+.hero{min-height:calc(100vh - 64px);min-height:calc(100svh - 64px);display:flex;flex-direction:column;justify-content:center;padding:56px 0 40px}
+.hero .wrap{width:100%}
+.hello{font-size:20px;color:var(--accent);margin-bottom:4px}
+.role{font-size:clamp(22px,3vw,32px);font-weight:300;margin-top:14px;line-height:1.3}
+.social{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.ico.circ{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--card)}
+.hero h1{font-size:clamp(44px,9.4vw,112px);font-weight:500;line-height:1;letter-spacing:-.03em;margin:0}
+.hero .lead{max-width:34em;margin:18px 0 0;color:var(--muted);font-size:20px;font-weight:300}
+.hero .lead b{color:var(--ink);font-weight:500}
+.cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-start;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:500;border-radius:99px;background:none;transition:background .2s,color .2s}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn.solid{background:var(--ink);color:var(--bg)}
+.btn.solid:hover{background:transparent;color:var(--ink)}
+.btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.scroll{align-self:center;margin-top:auto;padding-top:48px;display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--ink);text-decoration:none;font-size:18px;font-weight:300}
+.scroll svg{width:44px;height:26px;fill:none;stroke:currentColor;stroke-width:1.4;transition:transform .25s}
+.scroll:hover svg{transform:translateY(5px)}
+
+section{padding:64px 0}
+h2{font-size:clamp(32px,4.8vw,50px);font-weight:300;margin-bottom:12px}
+.sub{color:var(--muted);max-width:36em;margin-bottom:28px;font-weight:300;font-size:18px}
+
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.filter{border:1.5px solid var(--line);background:none;border-radius:99px;padding:8px 18px;transition:background .2s,color .2s,border-color .2s}
+.filter:hover{border-color:var(--ink)}
+.filter[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+.thumb{position:relative;flex:none;width:64px;height:64px;border-radius:10px;overflow:hidden;background:rgba(var(--ink-rgb),.06);background:color-mix(in srgb,var(--c) 16%,var(--card));border:1px solid rgba(var(--ink-rgb),.2);border:1px solid color-mix(in srgb,var(--c) 40%,transparent);color:var(--c);display:grid;place-items:center;font-weight:600;font-size:20px}
+.thumb svg{width:38px;height:38px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+.boards{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px}
+.card{text-align:left;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:12px;transition:transform .2s,border-color .2s;border-top:3px solid var(--c,var(--accent))}
+.card:hover{transform:translateY(-3px);border-color:var(--c,var(--accent));box-shadow:0 16px 34px -18px var(--c,var(--accent))}
+.card[hidden]{display:none}
+.card-head{display:flex;align-items:center;gap:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:14px;color:var(--muted)}
+.tags span{display:inline-flex;align-items:center;gap:6px}
+.tags i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+.card h3{font-size:22px}
+.card p{color:var(--muted);font-size:16px;font-weight:300}
+.hint{margin-top:auto;font-size:14.5px;color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}
+.chips li{font-size:14px;padding:3px 12px;background:rgba(var(--ink-rgb),.08);border-radius:99px}
+
+dialog{border:0;padding:0;background:none;color:inherit;max-width:none;max-height:none;width:100%;height:100%;overflow:auto}
+dialog::backdrop{background:rgba(12,5,8,.82);backdrop-filter:blur(4px)}
+dialog[open] .modal-box{animation:pop .28s cubic-bezier(.2,.8,.2,1)}
+@keyframes pop{from{opacity:0;transform:scale(.92) translateY(14px)}to{opacity:1;transform:none}}
+.modal-wrap{min-height:100%;display:grid;place-items:center;padding:24px}
+.modal-box{width:min(720px,100%);background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px 34px 30px}
+.modal-top{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.close{margin-left:auto;flex:none;width:40px;height:40px;border-radius:8px;border:1.5px solid var(--line);background:none;font-size:22px;line-height:1}
+.close:hover{border-color:var(--ink)}
+.modal-box h3{font-size:clamp(28px,4vw,38px);font-weight:400;margin-bottom:14px}
+.modal-box p{color:var(--muted);font-weight:300;font-size:18px}
+.modal-box h4{font-size:20px;margin:26px 0 10px;color:var(--accent)}
+.modal-box ol{padding-left:22px;color:var(--muted);font-weight:300;font-size:17.5px}
+.modal-box li{padding:3px 0 3px 4px}
+.modal-box .extra{margin-top:18px;font-size:16.5px}
+.modal-box .chips{margin-top:22px}
+.modal-box .btn{margin-top:26px}
+.modal-box .when{color:var(--accent);font-size:15px}
+.modal-box ul.points{padding-left:22px;color:var(--muted);font-weight:300;font-size:17.5px}
+.modal-box .org-line{margin-top:-4px}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.skill{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:14px;padding:20px}
+.skill h3{font-size:20px;margin-bottom:10px}
+.skill ul{list-style:none;padding:0;color:var(--muted);font-size:17px;font-weight:300}
+.skill li{padding:3px 0}
+.skill .chips{gap:8px}
+.skill .chips li{padding:3px 12px;font-size:14px}
+.center{text-align:center}
+.who{text-align:center;font-size:clamp(22px,3vw,28px);color:var(--accent);margin-top:6px}
+.about-text{max-width:46em;margin:22px auto 0;text-align:center}
+.about-text p{color:var(--muted);margin-bottom:18px;font-weight:300;font-size:18.5px}
+.about-text p b{color:var(--ink);font-weight:500}
+.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(28px,7vw,80px);margin-top:44px}
+.stat{text-align:center}
+.stat strong{display:block;font-size:clamp(40px,6vw,60px);font-weight:500;line-height:1;color:var(--accent)}
+.stat span{display:block;margin-top:8px;color:var(--muted);font-size:15px}
+footer{background:var(--deep);padding:60px 0 64px;margin-top:40px;border-top:1px solid var(--line)}
+footer h2{font-size:clamp(30px,4.2vw,44px)}
+footer .links{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+footer small{display:block;margin-top:40px;color:var(--muted);font-size:14.5px}
+
+.timeline{position:relative;list-style:none;padding:0;max-width:720px}
+.timeline::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.mile{position:relative;padding:0 0 38px 54px}
+.mile:last-child{padding-bottom:0}
+.mile::before{content:"";position:absolute;left:3px;top:6px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.mile.now::before{background:var(--accent);box-shadow:0 0 0 6px rgba(181,193,90,.18);box-shadow:0 0 0 6px color-mix(in srgb,var(--accent) 18%,transparent)}
+.mile .when{font-size:15px;color:var(--accent)}
+.mile h3{font-size:23px;margin:2px 0 4px}
+.mile .place{color:var(--ink);font-weight:400}
+.mile p{color:var(--muted);font-weight:300;margin-top:6px}
+.mile.small{padding-bottom:22px}
+.mile.small::before{left:7px;top:8px;width:10px;height:10px;border-width:2px}
+.mile.small h3{font-size:16px;font-weight:400}
+.mile.small .when{font-size:13px}
+.mile.small .place{font-size:14px;color:var(--muted)}
+.mile.small p{font-size:14px;margin-top:2px}
+
+.certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.cert{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:6px;transition:transform .2s,border-color .2s}
+.cert:hover{transform:translateY(-3px);border-color:var(--accent)}
+.cert .issuer{font-size:14.5px;color:var(--accent)}
+.cert h3{font-size:20px}
+.cert .yr{color:var(--muted);font-size:15px;font-weight:300}
+.cert a{margin-top:8px;color:var(--ink);font-size:15px}
+.cert a:hover{color:var(--accent)}
+
+.exp{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.job{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;text-align:left;display:flex;flex-direction:column;gap:2px;width:100%;transition:transform .2s,border-color .2s;border-left:3px solid var(--accent)}
+.job:hover{transform:translateY(-3px);border-color:var(--accent)}
+.job .when{font-size:14.5px;color:var(--accent)}
+.job h3{font-size:23px;margin:4px 0 2px}
+.job .org{color:var(--ink);font-weight:400}
+.job ul{margin-top:14px;padding-left:20px;color:var(--muted);font-weight:300;font-size:16.5px}
+.job li{padding:3px 0}
+.job .hint{margin-top:10px}
+
+.intern-sec{padding:8px 0 56px}
+.intern-sec h2{font-size:clamp(24px,3vw,30px)}
+.intern{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;max-width:720px}
+.intern .t{font-weight:500}
+.intern .when{color:var(--accent);font-size:14.5px;margin-left:8px}
+.intern p{color:var(--muted);font-weight:300;font-size:15.5px;margin-top:4px}
+
+.hero{position:relative;overflow:hidden}
+.hero .wrap,.hero .scroll{position:relative;z-index:1}
+.deco{position:absolute;top:0;height:100%;width:380px;pointer-events:none;z-index:0}
+.deco.l{left:0}.deco.r{right:0}
+.deco path{fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:route 2.4s .3s ease-out forwards}
+.deco circle{stroke-width:2.5;fill:var(--bg);opacity:0;animation:pad .4s 2.3s forwards}
+.deco text{fill:var(--muted);font-size:15px;opacity:0;animation:pad .5s 2.6s forwards}
+.deco .d2 path{animation-delay:.9s}.deco .d2 circle{animation-delay:2.9s}.deco text.d2{animation-delay:3.2s}
+.c-pcb{stroke:var(--pcb)}.c-fw{stroke:var(--fw)}.c-iot{stroke:var(--iot)}.c-py{stroke:var(--py)}
+@keyframes route{to{stroke-dashoffset:0}}
+@keyframes pad{to{opacity:1}}
+@media (max-width:1100px){.deco{opacity:.5}}
+
+.symbols{position:relative;display:flex;justify-content:space-between;align-items:center;margin:0 0 56px}
+.symbols::before{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background:var(--line)}
+.symbols span{position:relative;display:grid;place-items:center;color:var(--pcb)}
+.symbols span.node{background:var(--bg);padding:0 14px}
+.symbols span.fw{color:var(--fw)}
+.symbols span.py{color:var(--py)}
+.symbols svg{width:48px;height:48px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.symbols svg.solid{stroke:none}
+@media (max-width:520px){.symbols svg{width:34px;height:34px}.symbols span.node{padding:0 6px}}
+
+body{background-image:radial-gradient(rgba(var(--ink-rgb),.05) 1px,transparent 1px);background-size:30px 30px}
+section h2:not(.center){display:flex;align-items:center;gap:22px}
+section h2:not(.center)::after{content:"";flex:1;height:1px;background:var(--line)}
+#skills,#education{background:var(--deep);border-block:1px solid var(--line)}
+
+.ico.circ{transition:transform .2s,border-color .2s,color .2s}
+.ico.circ:hover{transform:translateY(-3px);border-color:var(--accent)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+.avail{display:inline-flex;align-items:center;gap:10px;margin-top:20px;padding:7px 16px;border:1px solid var(--line);border-radius:99px;background:var(--card);font-size:16px}
+.avail .dot{width:9px;height:9px;border-radius:50%;background:var(--fw);box-shadow:0 0 0 4px rgba(134,194,139,.22);box-shadow:0 0 0 4px color-mix(in srgb,var(--fw) 22%,transparent)}
+.view3d{margin:22px 0 0}
+.view3d img{display:block;width:100%;border-radius:12px;border:1px solid var(--line);background:var(--deep)}
+.view3d img[hidden]{display:none}
+.view3d figcaption{margin-top:8px;color:var(--muted);font-size:14px;text-align:center}
+.view3d.empty figcaption{display:none}
+.view3d-ph{display:none;aspect-ratio:16/9;min-height:150px;place-items:center;align-content:center;gap:8px;padding:18px;text-align:center;border:1.5px dashed var(--line);border-radius:12px;color:var(--muted);font-size:15px}
+.view3d.empty .view3d-ph{display:grid}
+.view3d-ph svg{width:40px;height:40px;fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.menu a.active{color:var(--accent);background:rgba(181,193,90,.12);background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.totop{position:fixed;right:18px;bottom:18px;z-index:15;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--card);border:1px solid var(--line);color:var(--ink);
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .25s,transform .25s,visibility .25s,border-color .2s,color .2s}
+.totop.show{opacity:1;visibility:visible;transform:none}
+.totop:hover{border-color:var(--accent);color:var(--accent)}
+.totop svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media (prefers-reduced-motion:reduce){.totop{transition:none}}
+
+.theme-btn{border:0;background:none}
+.theme-btn .moon{display:none}
+:root[data-theme="light"] .theme-btn .sun{display:none}
+:root[data-theme="light"] .theme-btn .moon{display:block}
+:root[data-theme="light"] .menu{box-shadow:0 16px 40px rgba(43,23,30,.18)}
+
+.empty{color:var(--muted);font-weight:300;margin-top:8px}
+
+@media (max-width:820px){.deco{opacity:.25}}
+@media (prefers-reduced-motion:reduce){
+  .deco path{animation:none;stroke-dashoffset:0}
+  .deco circle,.deco text{animation:none;opacity:1}
+}
+
+@media (max-width:820px){
+  .about{grid-template-columns:1fr}
+  .modal-box{padding:28px 22px 24px}
+  .menu{right:16px}
+  .bar .wrap{padding:0 12px}
+  .ico{width:40px;height:40px}
+}
+@media (prefers-reduced-motion:reduce){
+  dialog[open] .modal-box{animation:none}
+  html{scroll-behavior:auto}
+  .card,.menu,.scroll svg{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <div class="right">
+      <button class="ico theme-btn" id="themeBtn" aria-label="Switch to light theme" title="Switch theme">
+        <svg class="sun stroke" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="ico menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+    </div>
+  </div>
+  <nav class="menu" id="menu" aria-label="Sections">
+    <a href="#summary">Summary</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#certs">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero" id="summary">
+    <svg class="deco r" viewBox="0 0 380 700" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+      <g transform="translate(380 0) scale(-1 1)">
+        <g class="c-pcb"><path pathLength="1" d="M0 90 H80 L130 140 H250"/><circle cx="250" cy="140" r="7"/></g>
+        <g class="c-iot d2"><path pathLength="1" d="M0 250 H70 L120 300 H240"/><circle cx="240" cy="300" r="7"/></g>
+        <g class="c-fw"><path pathLength="1" d="M0 400 H60 L110 450 H220"/><circle cx="220" cy="450" r="7"/></g>
+        <g class="c-py d2"><path pathLength="1" d="M0 560 H110 L160 510 H280"/><circle cx="280" cy="510" r="7"/></g>
+      </g>
+    </svg>
+    <div class="wrap">
+      <p class="hello">Hello, I'm</p>
+      <h1>Amarnath K R</h1>
+      <p class="role">Electronics Engineer</p>
+      <p class="lead">Expertise in circuit design, PCB design, embedded systems and IoT, with hands-on firmware in C and Python.</p>
+      <p class="avail"><span class="dot"></span>Open to PCB Design, Embedded, IoT and other related roles.</p>
+      <div class="social">
+        <a class="ico circ" href="https://github.com/kramarnath" aria-label="GitHub" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a>
+        <a class="ico circ" href="https://www.linkedin.com/in/amarnath-k-r-276395237" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      </a>
+        <a class="ico circ" href="mailto:kamarnathraveendra@gmail.com" aria-label="Email">
+        <svg class="stroke" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+      </a>
+      </div>
+      <div class="cta">
+        <a class="btn solid" href="#projects">View my work</a>
+        <a class="btn" href="#contact">Contact me</a>
+        <a class="btn" href="resume.pdf">Resume</a>
+      </div>
+    </div>
+    <a class="scroll" href="#about" aria-label="Scroll down">
+      Scroll down
+      <svg viewBox="0 0 44 26" aria-hidden="true"><path d="M2 3l20 20L42 3"/></svg>
+    </a>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="symbols" aria-hidden="true">
+        <span><svg viewBox="0 0 48 48"><path d="M0 24 H10 L14 14 L20 34 L26 14 L32 34 L36 24 H48"/></svg></span>
+        <span><svg viewBox="0 0 48 48"><path d="M0 24 H20 M20 10 V38 M28 10 V38 M28 24 H48"/></svg></span>
+        <span class="node fw"><svg viewBox="0 0 48 48"><rect x="14" y="8" width="20" height="32" rx="2"/><path d="M6 14 H14 M6 24 H14 M6 34 H14 M34 14 H42 M34 24 H42 M34 34 H42"/><circle cx="19" cy="13" r="1.2" fill="currentColor"/></svg></span>
+        <span class="node"><svg viewBox="0 0 48 48"><rect x="5" y="9" width="38" height="30" rx="3"/><path d="M11 17 H19 L23 21 H29 M11 31 H17 L21 27 H29"/><circle cx="11" cy="17" r="2"/><circle cx="29" cy="21" r="2"/><circle cx="11" cy="31" r="2"/><circle cx="29" cy="27" r="2"/><rect x="32" y="19" width="6" height="10" rx="1"/><circle cx="9" cy="12" r="1" fill="currentColor"/><circle cx="39" cy="36" r="1" fill="currentColor"/></svg></span>
+        <span class="node"><svg viewBox="0 0 48 48"><path d="M8 40 L15 33" stroke-width="2"/><path d="M15 33 L29 19" stroke-width="5"/><path d="M29 19 L39 9" stroke-width="8"/></svg></span>
+        <span class="node"><svg viewBox="0 0 48 48"><path d="M24 6 L40 15 V33 L24 42 L8 33 V15 Z M8 15 L24 24 L40 15 M24 24 V42"/></svg></span>
+        <span class="node py"><svg viewBox="0 0 48 48"><path d="M16 14 L6 24 L16 34 M32 14 L42 24 L32 34 M28 9 L20 39"/></svg></span>
+      </div>
+      <h2 class="center">About Me</h2>
+      <h3 class="who">Who I Am</h3>
+      <div class="about-text">
+        <p>I started with an <b>ITI in Electronics Mechanic</b>, spent time in industry, then completed a <b>Diploma in Electronics Engineering</b> and a <b>B.Tech in Electronics and Communication Engineering from GEC Thrissur</b>. At FCI-OEN Connectors I inspected and tested connector assemblies and operated production machinery. At ERCMPU Ltd I diagnosed and fixed faults in industrial control equipment and helped keep production running. Those years taught me to pay attention to detail, fix problems methodically and understand how hardware testing works in practice.</p>
+        <p>In college and through my projects I gained hands-on experience with <b>ESP32, STM32, UART, SPI, I2C, GPIO, sensors, Python and Embedded C</b>, and with debugging real hardware. I have designed my own PCBs, written firmware for embedded systems, worked with different interfaces, and designed a 2.4 GHz RF front-end transmitter in Cadence Virtuoso.</p>
+        <p>I enjoy hardware testing, embedded systems, test automation, debugging and working with lab instruments. As someone new to the field, I want to learn how teams build test methods, instruments and fixtures, and to contribute my hardware and embedded skills along the way. I am looking for <b>embedded, IoT and core electronics roles</b> across Kerala and South India.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong id="statProjects">8</strong><span>Projects completed</span></div>
+        <div class="stat"><strong id="statCerts">3</strong><span>Certifications</span></div>
+        <div class="stat"><strong>4</strong><span>Boards used</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+      <div class="boards" id="boards"></div>
+      <p class="empty" id="empty" hidden>Coming soon.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills and tools</h2>
+      <p class="sub"></p>
+      <div class="skills">
+        <div class="skill" style="--c:var(--pcb)"><h3>PCB and hardware</h3><ul><li>KiCad | Altium Designer | Schematic | PCB layout | ERC | DRC | Gerber and Drill files | Cadence Virtuoso | Power-supplies | motor drivers | DC-DC | Buck/Boost Converters</li></ul></div>
+        <div class="skill" style="--c:var(--fw)"><h3>Embedded and firmware</h3><ul><li>ATmega32 | STM32 | Embedded C | Arduino IDE | STM32CubeIDE | Microchip Studio | UART | | I2C | SPI | RS485 | CAN</li></ul></div>
+        <div class="skill" style="--c:var(--iot)"><h3>IoT</h3><ul><li>ESP32 | ESP8266 | Thonny | MicroPython | HTTP | MQTT | Cloud Dashboards</li></ul></div>
+        <div class="skill" style="--c:var(--py)"><h3>Python</h3><ul><li>Statistical Learning | Numpy | Pandas | Scikit-learn | Matplotlib | Seaborn | Data analysis | Data visualization | Automation | Git and GitHub</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Industrial experience</h2>
+      <p class="sub">Hands-on work in industrial and manufacturing settings. Tap a card for details.</p>
+      <div class="exp" id="exp-list"></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <p class="sub">The path that brought me here, one step at a time.</p>
+      <ol class="timeline" id="timeline"></ol>
+    </div>
+  </section>
+
+  <section id="certs">
+    <div class="wrap">
+      <h2>Certifications</h2>
+      <p class="sub">Courses and training I have completed.</p>
+      <div class="certs" id="certs-list"></div>
+    </div>
+  </section>
+
+  <section class="intern-sec" id="internship">
+    <div class="wrap">
+      <h2>Internship</h2>
+      <div id="intern-list"></div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's talk about a role or a build.</h2>
+    <div class="links">
+      <a class="btn solid" href="mailto:kamarnathraveendra@gmail.com">Email me</a>
+      <a class="btn" href="https://github.com/kramarnath" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/amarnath-k-r-276395237" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <small>&copy; 2026 Amarnath K R. Designed and built with the help of AI.</small>
+  </div>
+</footer>
+
+<a class="totop" id="toTop" href="#summary" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+
+<dialog id="flash" aria-labelledby="fTitle">
+  <div class="modal-wrap" id="modalWrap">
+    <div class="modal-box">
+      <div class="modal-top">
+        <div class="thumb" id="fThumb"></div>
+        <div>
+          <div class="tags" id="fTags"></div>
+          <span class="status" id="fStatus"></span>
+        </div>
+        <button class="close" id="closeBtn" aria-label="Close">&times;</button>
+      </div>
+      <h3 id="fTitle"></h3>
+    </div>
+  </div>
+</dialog>
+
+</body>
+</html>
