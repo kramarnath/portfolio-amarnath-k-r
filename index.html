@@ -509,9 +509,8 @@ section h2:not(.center)::after{content:"";flex:1;height:1px;background:var(--lin
 /* Areas. The colours come from the variables at the top of the style section, so they change with light and dark mode. */
 const cats = {
   pcb:      { name: "Hardware and PCB", color: "var(--pcb)" },
-  embedded: { name: "Embedded",         color: "var(--fw)" },
-  iot:      { name: "IoT",              color: "var(--iot)" },
-  python:   { name: "Python",           color: "var(--py)" }
+  embedded: { name: "Embedded and IoT", color: "var(--fw)" },
+  ai:       { name: "AI/ML",            color: "var(--py)" }
 };
 
 /* Edit this list to change your projects.
@@ -524,7 +523,7 @@ const projects = [
     view3d: "docs/3d-edge-anomaly.png",
     icon: "anomaly",
     year: "2026",
-    cats: ["iot", "pcb"],
+    cats: ["embedded", "pcb"],
     line: "A standalone ESP-12E edge device that flags unusual readings using statistics, with no cloud.",
     skills: ["ESP32", "Edge analytics", "KiCad", "4-layer PCB", "I2C"],
     detail: "I used the data logged by my environmental monitoring system as the baseline to build and validate a statistical anomaly detector. I then re-implemented it as a standalone ESP-12E device that senses, analyses and alerts on its own, without any cloud dependency. I also designed the custom PCBs in KiCad: a 2-layer ESP32 breakout board and a 4-layer ESP-12E board.",
@@ -580,7 +579,7 @@ const projects = [
     view3d: "docs/3d-env-monitor.png",
     icon: "env",
     year: "2026",
-    cats: ["iot", "pcb"],
+    cats: ["embedded", "pcb"],
     line: "ESP32 and MicroPython node that streams temperature and humidity to ThingSpeak over MQTT.",
     skills: ["ESP32", "MicroPython", "MQTT", "ThingSpeak", "Telegram Bot API"],
     detail: "An IoT monitoring system built on an ESP32 in MicroPython. It reads temperature and humidity from a DHT11 sensor and shows them live in the cloud. I replaced plain HTTP requests with MQTT, which is lighter and better suited to constant data.",
@@ -648,7 +647,7 @@ const projects = [
     title: "Calories Burned Prediction",
     icon: "ml",
     year: "2026",
-    cats: ["python"],
+    cats: ["ai"],
     line: "A machine learning project: an XGBoost model that predicts calories burned, served through a Flask web app.",
     skills: ["Python", "Machine Learning", "XGBoost", "Flask", "REST API", "Streamlit", "HTML", "CSS"],
     detail: "An end-to-end machine learning project. XGBoost reached R\u00b2 = 0.9995 and MAE = 0.93. I first deployed it on Streamlit Community Cloud, then rebuilt the deployment as a custom full-stack app with a Flask API and an HTML and CSS frontend.",
