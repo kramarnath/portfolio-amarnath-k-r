@@ -25,14 +25,14 @@
   color-scheme:dark;
   --bg:#1b0e14; --card:#271720; --deep:#12080d; --ink:#f3ece4; --muted:#b5a5a6; --accent:#b5c15a;
   --ink-rgb:243,236,228; --bg-rgb:27,14,20; --line:rgba(var(--ink-rgb),.14);
-  --pcb:#c8a45a; --fw:#86c28b; --iot:#b79be0; --py:#e8845f; --ds:#5ec2cf; --ml:#e56b8a;
+  --pcb:#c8a45a; --fw:#86c28b; --iot:#b79be0; --py:#e8845f;
   --shadow:0 16px 40px rgba(0,0,0,.5);
 }
 :root[data-theme="light"]{
   color-scheme:light;
   --bg:#f6f0e8; --card:#fffaf2; --deep:#ece3d6; --ink:#2a1219; --muted:#6e5d60; --accent:#657516;
   --ink-rgb:42,18,25; --bg-rgb:246,240,232;
-  --pcb:#8f6d1d; --fw:#2f7d44; --iot:#6f4bbd; --py:#bf4e26; --ds:#17808f; --ml:#b8305a;
+  --pcb:#8f6d1d; --fw:#2f7d44; --iot:#6f4bbd; --py:#bf4e26;
   --shadow:0 16px 40px rgba(42,18,25,.16);
 }
 *{box-sizing:border-box;margin:0}
@@ -511,9 +511,7 @@ const cats = {
   pcb:      { name: "Hardware and PCB", color: "var(--pcb)" },
   embedded: { name: "Embedded",         color: "var(--fw)" },
   iot:      { name: "IoT",              color: "var(--iot)" },
-  python:   { name: "Python",           color: "var(--py)" },
-  ds:       { name: "Data science",     color: "var(--ds)" },
-  ml:       { name: "Machine learning", color: "var(--ml)" }
+  python:   { name: "Python",           color: "var(--py)" }
 };
 
 /* Edit this list to change your projects.
@@ -650,9 +648,9 @@ const projects = [
     title: "Calories Burned Prediction",
     icon: "ml",
     year: "2026",
-    cats: ["ml"],
-    line: "An XGBoost model that predicts calories burned, served through a Flask web app.",
-    skills: ["Python", "XGBoost", "Flask", "REST API", "Streamlit", "HTML", "CSS"],
+    cats: ["python"],
+    line: "A machine learning project: an XGBoost model that predicts calories burned, served through a Flask web app.",
+    skills: ["Python", "Machine Learning", "XGBoost", "Flask", "REST API", "Streamlit", "HTML", "CSS"],
     detail: "An end-to-end machine learning project. XGBoost reached R\u00b2 = 0.9995 and MAE = 0.93. I first deployed it on Streamlit Community Cloud, then rebuilt the deployment as a custom full-stack app with a Flask API and an HTML and CSS frontend.",
     steps: [
       "Prepare the data and add BMI as a custom feature.",
